@@ -11,7 +11,7 @@ handleSearch: function(searchingText) {
     }.bind(this));
   },
 
-<Search onSearch={this.handleSearch}/>
+
 
 getGif: function(searchingText, callback) {  
     var url = GIPHY_API_URL + '/v1/gifs/random?api_key=' + GIPHY_PUB_KEY + '&tag=' + searchingText;  
@@ -57,6 +57,7 @@ App = React.createClass({
                 url={this.state.gif.url}
                 sourceUrl={this.state.gif.sourceUrl} 
             />
+            <Search onSearch={this.handleSearch}/>
           </div>
         );
     }
